@@ -28,7 +28,7 @@
         <dither style="width:496px;"></dither>
         
         <div class="paragraph">Make your N163 wavetable more interesting.</div>
-        <div>Wavetable: <input type="text" value="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 15 15 15 15 15 15 15 15 15 15 15" onchange="generate(this.value);" onload="generate(this.value);"/></div>
+        <div>Wavetable: <input type="text" value="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 15 15 15 15 15 15 15 15 15 15 15" onchange="generate(e.target.value);" onload="generate(e.target.value);"/></div>
         <div class="paragraph">Output:<br/><textarea class="textarea" readonly onclick="this.select();document.execCommand('copy');"></textarea></div>
         
         <script>

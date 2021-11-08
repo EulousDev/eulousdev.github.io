@@ -30,11 +30,13 @@
         <div class="paragraph">Make your N163 wavetable more interesting.</div>
         <div>Wavetable: <input type="text" value="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 15 15 15 15 15 15 15 15 15 15 15" class="wave"/></div>
         <div class="paragraph">Output:<br/><textarea class="textarea" readonly ></textarea></div>
+        <br/>
+        <canvas class="canvas" height="32" width="256"></canvas>
         
         <script>
-            var waveel = document.querySelector(".wave");
+            let waveel = document.querySelector(".wave");
             waveel.onchange = function(e) {generate(waveel.value);};
-            var textarea = document.querySelector(".textarea");
+            let textarea = document.querySelector(".textarea");
             textarea.onclick = function(e) {textarea.select();document.execCommand('copy');};
             function generate(wavedata) {
                 // setup //
@@ -58,6 +60,12 @@
                 return wavetable;
             }
             generate(waveel.value);
+            let canvas = document.querySelector(".canvas");
+            function draw() {
+                let wavetables = textarea.value.split(" ;\n");
+                wavetables = wavetables.map(x=>(x.map(y=>parseInt(y))));
+                console.log(wavetables);
+            }
         </script>
     </body>
 </html>

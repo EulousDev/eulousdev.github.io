@@ -72,7 +72,8 @@
                 for (var i=0;i<wavetable.length;i++) {
                     ctx.fillRect(i*2, canvas.height-wavetable[i]*2-2, 2, 2);
                 }
-                phase = (phase+1)%wavetables.length;
+                phase = phase+1;
+                while (phase >= wavetables.length) {phase -= wavetables.length;}
                 window.requestAnimationFrame(draw);
             }
             window.requestAnimationFrame(draw);

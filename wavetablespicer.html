@@ -70,7 +70,7 @@
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = "#FFFFFF";
                 for (var i=0;i<wavetable.length;i++) {
-                    ctx.fillRect(i*2, canvas.height-wavetable[i]*2, 2, 2);
+                    ctx.fillRect(i*2, canvas.height-wavetable[i]*2-2, 2, 2);
                 }
                 phase = (phase+1)%wavetables.length;
                 window.requestAnimationFrame(draw);

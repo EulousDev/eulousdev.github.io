@@ -73,7 +73,7 @@
                     ctx.fillRect(i*2, canvas.height-wavetable[i]*2-2, 2, 2);
                 }
                 phase = phase+1;
-                while (phase >= wavetables.length-1) {phase -= wavetables.length;}
+                while (phase >= wavetables.length-1) {phase -= wavetables.length-1;}
                 window.requestAnimationFrame(draw);
             }
             window.requestAnimationFrame(draw);

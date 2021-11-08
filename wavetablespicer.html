@@ -8,13 +8,26 @@
         <link rel="preload" href="PressStart2P-Regular.ttf" as="font" crossorigin="anonymous"/>
         <link rel="preload" href="light_pixel-7.ttf" as="font" crossorigin="anonymous"/>
         <link rel="stylesheet" href="bit.css"/>
+        <style>
+            input[type="text"], textarea {
+                height: 16px;
+                border: 2px solid black;
+                vertical-align: bottom;
+                font-family: pressstart2p;
+                font-size: 16px;
+                width: calc(100% - 16px);
+            }
+            input[type="text"]:focus, textarea:focus {outline: 2px solid white;}
+            input[type="text"]::selection, textarea::selection {background: black; color: white;}
+        </style>
     </head>
     <body>
-        <dither style="width:512px;"></dither>
+        <dither style="width:496px;"></dither>
         <h1>Wavetable spicer</h1>
-        <dither style="width:512px;"></dither>
+        <dither style="width:496px;"></dither>
         
         <div class="paragraph">Make your N163 wavetable more interesting.</div>
         <div>Wavetable: <input type="text" value="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 15 15 15 15 15 15 15 15 15 15 15"/></div>
+        <div class="paragraph">Output:<br/><textarea></textarea></div>
     </body>
 </html>

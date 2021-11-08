@@ -61,11 +61,21 @@
             }
             generate(waveel.value);
             let canvas = document.querySelector(".canvas");
+            let ctx = canvas.getContext("2d");
+            let phase = 0;
             function draw() {
                 let wavetables = textarea.value.split(" ;\n");
-                wavetables = wavetables.map(x=>(x.map(y=>parseInt(y))));
-                console.log(wavetables);
+                let wavetable = wavetables[phase].split(" ").map(x=>parseInt(x));
+                ctx.fillStyle = "#000000";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#FFFFFF";
+                for (var i=0;i<wavetable.length;i++) {
+                    ctx.fillRect(i*2, canvas.height-wavetable[i]*2, 2, 2);
+                }
+                phase = (phase+1)%wavetables.length;
+                window.requestAnimationFrame(draw);
             }
+            window.requestAnimationFrame(draw);
         </script>
     </body>
 </html>

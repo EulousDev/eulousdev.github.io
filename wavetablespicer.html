@@ -34,7 +34,7 @@
         <script>
             var waveel = document.querySelector(".wave");
             waveel.onchange = function(e) {generate(waveel.value);};
-            waveel.onload = function(e) {generate(waveel.value);};
+            waveel.onkeydown = function(e) {generate(waveel.value);};
             var textarea = document.querySelector(".textarea");
             textarea.onclick = function(e) {textarea.select();document.execCommand('copy');};
             function generate(wavedata) {
@@ -58,6 +58,7 @@
                 textarea.value = wavetable;
                 return wavetable;
             }
+            generate(waveel.value);
         </script>
     </body>
 </html>

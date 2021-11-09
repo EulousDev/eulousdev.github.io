@@ -35,11 +35,12 @@
         
         <script>
             let waveel = document.querySelector(".wave");
-            waveel.onchange = function(e) {generate(waveel.value.split(" ;").join("").split(",").join(" "));};
+            waveel.onchange = function(e) {generate(waveel.value.split(" ;").join("").split(",").join(" ").trimEnd());};
             let textarea = document.querySelector(".textarea");
             textarea.onclick = function(e) {textarea.select();document.execCommand('copy');};
             function generate(wavedata) {
                 // setup //
+                if (wavedata.
                 var wave = wavedata.split(" ").map(x=>parseInt(x));
                 var wavetable = "";            // wavetable string
                 const depth = 16;              // depth
@@ -59,7 +60,7 @@
                 textarea.value = wavetable;
                 return wavetable;
             }
-            generate(waveel.value.split(";").join("").split(",").join(""));
+            generate(waveel.value.split(";").join("").split(",").join("").trimEnd());
             let canvas = document.querySelector(".canvas");
             let ctx = canvas.getContext("2d");
             let phase = 0;

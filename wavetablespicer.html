@@ -65,15 +65,17 @@
             let phase = 0;
             function draw() {
                 let wavetables = textarea.value.split(" ;\n");
-                let wavetable = wavetables[phase].split(" ").map(x=>parseInt(x));
-                ctx.fillStyle = "#000000";
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                ctx.fillStyle = "#FFFFFF";
-                for (var i=0;i<wavetable.length;i++) {
-                    ctx.fillRect(i*2, canvas.height-wavetable[i]*2-2, 2, 2);
+                if (wavetables[phase]) {
+                    let wavetable = wavetables[phase].split(" ").map(x=>parseInt(x));
+                    ctx.fillStyle = "#000000";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = "#FFFFFF";
+                    for (var i=0;i<wavetable.length;i++) {
+                        ctx.fillRect(i*2, canvas.height-wavetable[i]*2-2, 2, 2);
+                    }
+                    phase = phase+1;
+                    while (phase >= wavetables.length-1) {phase -= wavetables.length-1;}
                 }
-                phase = phase+1;
-                while (phase >= wavetables.length-1) {phase -= wavetables.length-1;}
                 window.requestAnimationFrame(draw);
             }
             window.requestAnimationFrame(draw);

@@ -2,29 +2,29 @@
 @font-face {
     font-family: onesize;
     font-weight: normal;
-    src: url(../fonts/ONESIZE_.TTF);
+    src: url(/fonts/ONESIZE_.TTF);
 }
 @font-face {
     font-family: onesizeoutline;
-    src: url(../fonts/ONESR___.TTF);
+    src: url(/fonts/ONESR___.TTF);
 }
 @font-face {
     font-family: pressstart2p;
     font-weight: normal;
-    src: url(../fonts/PressStart2P-Regular.ttf);
+    src: url(/fonts/PressStart2P-Regular.ttf);
 }
 @font-face {
     font-family: pixel7;
     font-weight: bold;
-    src: url(../fonts/light_pixel-7.ttf);
+    src: url(/fonts/light_pixel-7.ttf);
 }
 @font-face {
     font-family: pixeldingbat;
-    src: url(../fonts/pixel_dingbats-7.ttf);
+    src: url(/fonts/pixel_dingbats-7.ttf);
 }
 @font-face {
     font-family: pinball;
-    src: url(../fonts/PKMN-Pinball.ttf);
+    src: url(/fonts/PKMN-Pinball.ttf);
 }
 
 
@@ -106,7 +106,7 @@ h2 {
 }
 div.dither {
     display:block;
-    background: url("../images/dither.png");
+    background: url("/images/dither.png");
     height:8px;
     width:256px;
 }

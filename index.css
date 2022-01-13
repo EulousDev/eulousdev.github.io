@@ -8,7 +8,6 @@
     border:8px solid transparent;
     border-image:url('/images/dither.png') 8 repeat;
     width:512px;
-    height:176px;
 }
 .dingbat {
     margin-left:8px;

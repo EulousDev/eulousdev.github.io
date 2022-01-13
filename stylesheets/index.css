@@ -4,3 +4,9 @@
     background-repeat:no-repeat;
     letter-spacing:8px;
 }
+.software {
+    border:8px solid transparent;
+    border-image:url('images/border.png') 8 repeat;
+    width:512px;
+    height:176px;
+}

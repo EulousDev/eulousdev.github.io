@@ -14,3 +14,8 @@
     margin-right:8px;
     margin-top:16px;
 }
+.mark {
+    position:absolute;
+    top:16px;
+    right:32px;
+}
